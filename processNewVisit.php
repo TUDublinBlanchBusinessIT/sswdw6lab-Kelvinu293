@@ -1,14 +1,13 @@
 <?php
 
-include("dbcon.php");
-$vdate = $_POST['visitDate'];
-$vtime = $_POST['visitTime'];
-$docid = $_POST['docid'];
-$ptntid = $_POST['ptntid'];
-$cost = $_POST['cost'];
+$vDate = $_POST['visitDate'];
+echo $vDate;
+include("dbcon.php")
+
+$sq1 = "Insert into visit(visit_date,visit_time,doctor_id,patient_id,cost) values('2004-02-20','15:00','3','1',40)";
+mysqli_query()
 
 
-$sql = " Insert into visit(visit_date,visit_time,doctor_id,patient_id,cost) values('$vdate','$vtime','$docid','$ptntid',$cost)";
-//echo $sql;
-mysqli_query($conn,$sql);
+
+
 ?>
